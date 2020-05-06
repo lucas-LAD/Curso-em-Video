@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade da Pessoa</title>
+</head>
+<body>
+    <h1>Sistema de Pesquisa de Nacionalidade</h1>
+    Onde voce mora ? <input type="text" name="txttext" id="txttext">
+    
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="res">
+        
+    </div>
+    <script>
+        function enviar(){
+            var nacTxt = window.document.getElementById('txttext')
+            var res = window.document.querySelector("div#res")
+            var nac = nacTxt.value
+            if(nac == 'Brasil'){
+            res.innerHTML += `<p>Você mora no ${nac} então você é Brasileiro</p>`
+            }else{
+            res.innerHTML += `<p>Você não é BR</p>`
+        }
+        }
+        
+    </script>
+</body>
+</html>
